@@ -40,6 +40,30 @@ static int	ft_delcount(char const *s, char c)
 	return (count);
 }
 
+static void	ft_loop(char const *s, char *c, int *csize, char **p)
+{
+	int	i;
+	int	j;
+	int	count;
+
+	i = 0;
+	j = 0;
+	while (j < *csize)
+	{
+		count = 0;
+		while (s[i] == *c)
+			i++;
+		while (s[i] != *c && s[i])
+		{
+			p[j][count] = s[i];
+			i++;
+			count++;
+		}
+		p[j][count] = '\0';
+		j++;
+	}
+}
+
 static void	ft_fillco(char const *s, char c, int csize, char **p)
 {
 	int	i;
@@ -61,22 +85,7 @@ static void	ft_fillco(char const *s, char c, int csize, char **p)
 		p[j] = malloc(count * sizeof(char) + 1);
 		j++;
 	}
-	i = 0;
-	j = 0;
-	while (j < csize)
-	{
-		count = 0;
-		while (s[i] == c)
-			i++;
-		while (s[i] != c && s[i])
-		{
-			p[j][count] = s[i];
-			i++;
-			count++;
-		}
-		p[j][count] = '\0';
-		j++;
-	}
+	ft_loop(s, &c, &csize, p);
 }
 
 char	**ft_split(char const *s, char c)
@@ -89,7 +98,7 @@ char	**ft_split(char const *s, char c)
 	cosize = ft_delcount(s, c);
 	p = malloc((cosize + 1) * sizeof(char *));
 	if (!p)
-		return(NULL);
+		return (NULL);
 	p[cosize] = NULL;
 	ft_fillco(s, c, cosize, p);
 	return (p);

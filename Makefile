@@ -82,7 +82,7 @@ bonus: ${B_OBJ} ${INCLUDE}
 	${LIB} ${NAME} ${B_OBJ}
 
 clean:
-	rm -f ${OBJ}
+	rm -f ${OBJ} ${B_OBJ}
 
 fclean: clean
 	rm -f ${NAME}

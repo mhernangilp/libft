@@ -14,6 +14,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
+static void	sum(int *i, int *j)
+{
+	*i += 1;
+	*j += 1;
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
@@ -30,15 +36,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s1[j])
 	{
 		t[i] = s1[j];
-		i++;
-		j++;
+		sum(&i, &j);
 	}
 	j = 0;
 	while (s2[j])
 	{
 		t[i] = s2[j];
-		i++;
-		j++;
+		sum(&i, &j);
 	}
 	t[i] = '\0';
 	return (t);

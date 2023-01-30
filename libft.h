@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef	struct		s_list
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
