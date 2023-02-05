@@ -6,14 +6,21 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:54:55 by mhernang          #+#    #+#             */
-/*   Updated: 2023/01/29 21:33:41 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/05 19:49:49 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
+
+static int	get_optimal_len(char const *s, unsigned int start, size_t len)
+{
+	int	len_str;
+
+	len_str = ft_strlen(&s[start]);
+	if (len < len_str)
+		return (len);
+	return (len_str);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -25,10 +32,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 	{
-		t = malloc (1);
+		t = malloc(1);
+		if (!t)
+			return NULL;
+		t[0] = 0;
 		return (t);
 	}
-	t = malloc ((len * sizeof(char)) + 1);
+	t = malloc ((get_optimal_len(s, start, len) * sizeof(char)) + 1);
 	if (!t)
 		return (NULL);
 	while (s[start] && len > 0)
