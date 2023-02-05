@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 18:52:28 by mhernang          #+#    #+#             */
-/*   Updated: 2023/01/29 19:00:00 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/05 20:55:49 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		temp = *lst;

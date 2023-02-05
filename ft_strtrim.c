@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:01:41 by mhernang          #+#    #+#             */
-/*   Updated: 2023/01/27 18:44:32 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/05 20:21:10 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	p = malloc((end - start) * sizeof(char) + 1);
 	if (!p)
 		return (NULL);
-	if (start == ft_strlen(s1))
+	if ((size_t) start == ft_strlen(s1))
 		return (p);
 	ft_strlcpy(p, &s1[start], end - start + 1);
 	return (p);

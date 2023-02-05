@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:54:55 by mhernang          #+#    #+#             */
-/*   Updated: 2023/02/05 19:49:49 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/05 21:32:08 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_optimal_len(char const *s, unsigned int start, size_t len)
 {
-	int	len_str;
+	size_t	len_str;
 
 	len_str = ft_strlen(&s[start]);
 	if (len < len_str)
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		t = malloc(1);
 		if (!t)
-			return NULL;
+			return (NULL);
 		t[0] = 0;
 		return (t);
 	}
@@ -43,9 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[start] && len > 0)
 	{
-		t[i] = s[start];
+		t[i++] = s[start];
 		len--;
-		i++;
 		start++;
 	}
 	t[i] = '\0';
