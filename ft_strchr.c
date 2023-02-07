@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:35:07 by mhernang          #+#    #+#             */
-/*   Updated: 2023/02/07 11:09:28 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:42:57 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strchr(const char *str, int c)
 
 	i = 0;
 	if (!(char)c)
-		return (&str[ft_strlen(str)]);
+		return ((char *) &str[ft_strlen(str)]);
 	while (str[i])
 	{
 		if (str[i] == (char)c)
-			return (&str[i]);
+			return ((char *) &str[i]);
 		i++;
 	}
 	return (NULL);

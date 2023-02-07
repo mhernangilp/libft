@@ -6,18 +6,18 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:38:40 by mhernang          #+#    #+#             */
-/*   Updated: 2023/02/07 11:16:22 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:43:47 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;

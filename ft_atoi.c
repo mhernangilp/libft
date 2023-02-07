@@ -6,13 +6,13 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:54:36 by mhernang          #+#    #+#             */
-/*   Updated: 2023/02/07 11:14:36 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:38:49 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	digit(char *str, int i)
+static int	digit(const char *str, int i)
 {
 	if ((str[i] >= '0') && (str[i] <= '9'))
 		return (1);
