@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:38:40 by mhernang          #+#    #+#             */
-/*   Updated: 2023/01/24 15:02:21 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:16:22 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*target;
 

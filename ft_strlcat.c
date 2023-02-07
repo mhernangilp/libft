@@ -6,7 +6,7 @@
 /*   By: mhernang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:11:49 by mhernang          #+#    #+#             */
-/*   Updated: 2023/02/05 21:30:39 by mhernang         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:06:46 by mhernang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ static unsigned int	ft_strlen_max(char *dest, unsigned int size)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	leng_dest;
-	unsigned int	leng_source;
+	size_t	i;
+	size_t	j;
+	size_t	leng_dest;
+	size_t	leng_source;
 
 	if ((!dest || !src) && !size)
 		return (0);
