@@ -95,6 +95,5 @@ make
 
 ```
 make all		Compiles the libft.a file
-make bonus		Compiles all bonus files instead of the mandatory ones
-make norminette		Checks Norm for all .c and .h files in the libft/ folder	
+make bonus		Compiles all bonus files instead of the mandatory ones	
 ```
