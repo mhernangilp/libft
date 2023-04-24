@@ -5,7 +5,6 @@
 * [Introduction](#introduction)
 * [Function Overview](#function-overview)
 * [Bonus](#bonus)
-* [Additional Functions](#additional-functions)
 * [Installation](#installation)
 
 ## Introduction
@@ -72,11 +71,6 @@ Bonus functions to implement
 | ``ft_lstclear`` | Deletes a given element and every element after that |
 | ``ft_lstiter`` | Applies a function to the content of every node of the linked list |
 | ``ft_lstmap`` | Applies function to a copy of the list, freeing when necessary |
-
-
-## Additional Functions
-
-Besides ``mandatory`` and ``bonus`` functions, I also have a set of functions inside the ``srca/`` folder. These functions are not part of the ``libft`` subject but they will be useful in future projects. You can check their description in the [libft.h file](https://gitlab.com/madebypixel02/libft/-/blob/main/inc/libft.h)
 
 ## Installation
 To test this library out, it's recommended that you have the following packages installed
