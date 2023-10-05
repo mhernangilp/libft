@@ -93,6 +93,7 @@ bonus: start ${B_OBJ} ${INCLUDE}
 
 clean:
 	@rm -f ${OBJ} ${B_OBJ}
+	@echo "$(RED)Lift objects deleted ✓$(NOC)"
 
 fclean: clean
 	@rm -f ${NAME}
