@@ -16,6 +16,11 @@ CC = gcc
 
 NAME = libft.a
 
+NOC = \033[0m
+YELLOW = \033[1;33m
+GREEN = \033[1;32m
+RED = \033[1;31m
+
 SRC = src/ft_isalpha.c \
 	   src/ft_memcmp.c \
 	   src/ft_strnstr.c \
@@ -70,22 +75,28 @@ FLAGS = -Wall -Werror -Wextra
 
 INCLUDE = libft.h
 
-all:	${NAME}
+all: ${NAME}
 
-${NAME}: ${OBJ} ${INCLUDE}
-	${LIB} ${NAME} ${OBJ}
+start:
+	@echo "$(YELLOW)Compiling libft ...$(NOC)"
+
+${NAME}: start ${OBJ} ${INCLUDE}
+	@${LIB} ${NAME} ${OBJ}
+	@echo "$(GREEN)Libft compiled ✓$(NOC)"
 
 %.o: %.c
-	${CC} ${CCFLAGS} -c -o $@ $<
+	@${CC} ${CCFLAGS} -c -o $@ $<
 
-bonus: ${B_OBJ} ${INCLUDE}
-	${LIB} ${NAME} ${B_OBJ}
+bonus: start ${B_OBJ} ${INCLUDE}
+	@${LIB} ${NAME} ${B_OBJ}
+	@echo "$(GREEN)Libft compiled with bonus ✓$(NOC)"
 
 clean:
-	rm -f ${OBJ} ${B_OBJ}
+	@rm -f ${OBJ} ${B_OBJ}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
+	@echo "$(RED)Lift deleted ✓$(NOC)"
 
 re: fclean all
 
