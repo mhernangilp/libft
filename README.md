@@ -9,6 +9,7 @@
 
 ## Introduction
 In this project we'll be implementing our home-made functions from libc, which will be very useful to get familiar with memory allocation, and to think of creative ways to code these functions.
+
 For more detailed information, look at the [**subject of this project**](https://github.com/mhernangilp/libft/blob/main/es.subject.libft.pdf).
 
 ## Function Overview
